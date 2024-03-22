@@ -45,7 +45,13 @@ public class DeadlyPath
                 {
                     foreach (Character c in candidates)
                     {
-                        if (c.type == Character.Type.TrashMob && c.key != Key.Hound && c.key != Key.SpiritInFlask && c.key != Key.UnstableFlasksSpirit)
+                        if (c.type == Character.Type.TrashMob && 
+                            c.key != Key.Hound && 
+                            c.key != Key.SpiritInFlask && 
+                            c.key != Key.UnstableFlask &&
+                            c.key != Key.UnstableFlasksSpirit &&
+                            c.key != Key.CarleonRecruit &&
+                            c.key != Key.Unspecified)
                             ____constructors[Singleton<HardmodeManager>.Instance.currentLevel].Provide(c); // 모든적이 나와요
                     }
                 }
